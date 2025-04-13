@@ -2,7 +2,7 @@
 
 # 🏥 Clínica Médica SPA
 
-Este é um projeto didático desenvolvido para a disciplina de PRW1, com o objetivo de aplicar os conhecimentos adquiridos na criação de um sistema de **agendamento de consultas médicas** em formato **SPA (Single Page Application)**, utilizando **HTML**, **CSS**, **JavaScript** e **jQuery**.
+Este é um projeto didático desenvolvido para a disciplina de PRW1 em 2023, com o objetivo de aplicar os conhecimentos adquiridos na criação de um sistema de **agendamento de consultas médicas** em formato **SPA (Single Page Application)**, utilizando **HTML**, **CSS**, **JavaScript** e **jQuery**.
 
 ## 🔗 Webservice de Apoio
 
@@ -64,6 +64,6 @@ O sistema simula o funcionamento básico de uma clínica médica, permitindo o g
 
 ## 📚 Licença
 
-Este projeto é de uso didático e livre para fins educacionais.
+Este projeto é de uso didático e livre para fins educacionais. Agradecimentos à zFefeu, Kayky e Maciel por fazerem parte do grupo que desenvolveu esse site.
 
 ---
