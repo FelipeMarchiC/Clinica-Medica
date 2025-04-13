@@ -1,5 +1,3 @@
-Claro! Aqui está um exemplo de `README.md` para o projeto **Clínica Médica**:
-
 ---
 
 # 🏥 Clínica Médica SPA
