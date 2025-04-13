@@ -10,7 +10,6 @@ Esse webservice permite operações de CRUD para médicos, pacientes e consultas
 ⚙️ Funcionalidades Implementadas
 
 ✅ Ver lista de pacientes cadastrados
-
 ✅ Ver lista de médicos cadastrados e suas especialidades
 
 ✅ Listar todas as consultas agendadas para um médico X
