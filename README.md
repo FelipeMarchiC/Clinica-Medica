@@ -53,20 +53,6 @@ Esse webservice permite operações de CRUD para médicos, pacientes e consultas
 
 ---
 
-## 📁 Estrutura do Projeto
-
-```
-clinica-medica-spa/
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── app.js
-└── README.md
-```
-
----
-
 ## 🧑‍⚕️ Sobre o Sistema
 
 O sistema simula o funcionamento básico de uma clínica médica, permitindo o gerenciamento de cadastros e agendamentos. Foi desenvolvido com fins educacionais para praticar conceitos como:
