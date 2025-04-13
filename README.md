@@ -7,14 +7,22 @@ O sistema consome dados de um webservice RESTful disponível em:
 
 Esse webservice permite operações de CRUD para médicos, pacientes e consultas.
 
-⚙️ Funcionalidades Implementadas /n
+⚙️ Funcionalidades Implementadas
+
 ✅ Ver lista de pacientes cadastrados
+
 ✅ Ver lista de médicos cadastrados e suas especialidades
+
 ✅ Listar todas as consultas agendadas para um médico X
+
 ✅ Listar todas as consultas agendadas para um paciente Y
+
 ✅ Cadastrar uma nova consulta, associando médico e paciente existentes
+
 ✅ Editar informações de médicos ou pacientes (nome, data, especialidade)
+
 ✅ Remover uma consulta agendada
+
 ✅ Remover médicos ou pacientes do sistema
 
 🛠 Tecnologias Utilizadas
