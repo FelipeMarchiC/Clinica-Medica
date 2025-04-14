@@ -319,11 +319,11 @@ function cadastrarConsulta(medico, paciente, data) {
     $.ajax({
         url: 'https://ifsp.ddns.net/webservices/clinicaMedica/consultas',
         type: 'POST',
-        data: {
+        data: JSON.stringify({
             "idMedico": medico,
             "idPaciente": paciente,
             "data": data,
-        },
+        }),
         success: function () {
             $("#cadastro-medico").val("");
             $("#cadastro-paciente").val("");
@@ -449,10 +449,10 @@ function cadastrarMedico(nome, idEspecialidade) {
     $.ajax({
         url: "https://ifsp.ddns.net/webservices/clinicaMedica/medicos",
         type: 'POST',
-        data: {
+        data: JSON.stringify({
             "nome": nome,
             "idEspecialidade": idEspecialidade,
-        },
+        }),
         success: function () {
             $("#cadastro-medico").val("");
             let alerta = criar('div', 'notification is-success', 'Cadastrado com sucesso!');
@@ -529,22 +529,26 @@ function editarMedico(e) {
     $("main").append(modal);
 
     $(botao).click(() => {
-        console.log($("#especialidade option:selected"))
         $.ajax({
             url: 'https://ifsp.ddns.net/webservices/clinicaMedica/medicos/' + id,
             type: 'PUT',
-            data: {
+            data: JSON.stringify({
                 "nome": inputNome.val(),
-                "idEspecialidade": $("#especialidade option:selected").attr("value"),
-            },
+                "idEspecialidade": selectEspecialidade.val(),
+            }),
             success: function () {
                 console.log("deu bom");
                 $(linha).children().eq(0).text(inputNome.val());
                 $(linha).children().eq(2).text($("#especialidade option:selected").text());
                 limparModal();
             },
-            error: function () {
-                alert("deu erro");
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.error("Erro na requisição AJAX:");
+                console.error("Status:", textStatus);
+                console.error("Erro lançado:", errorThrown);
+                console.error("Resposta do servidor:", jqXHR.responseText);
+            
+                alert("Ocorreu um erro ao editar o paciente. Verifique o console para mais detalhes.");
             }
         });
 
@@ -649,10 +653,10 @@ function cadastrarPaciente(nome, DataNascimento) {
     $.ajax({
         url: "https://ifsp.ddns.net/webservices/clinicaMedica/pacientes",
         type: 'POST',
-        data: {
+        data: JSON.stringify({
             "nome": nome,
             "dataNascimento": DataNascimento,
-        },
+        }),
         success: function () {
             $("#cadastro-paciente").val("");
             $("#dataNascimento").val("");
@@ -719,10 +723,10 @@ function editarPaciente(e) {
         $.ajax({
             url: 'https://ifsp.ddns.net/webservices/clinicaMedica/pacientes/' + id,
             type: 'PUT',
-            data: {
+            data: JSON.stringify({
                 "nome": inputNome.val(),
                 "dataNascimento": inputNascimento.val()
-            },
+            }),
             success: function () {
                 console.log("deu bom");
                 $(linha).children().eq(0).text($(inputNome).val());
@@ -730,8 +734,13 @@ function editarPaciente(e) {
                 limparModal();
 
             },
-            error: function () {
-                alert("deu erro");
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.error("Erro na requisição AJAX:");
+                console.error("Status:", textStatus);
+                console.error("Erro lançado:", errorThrown);
+                console.error("Resposta do servidor:", jqXHR.responseText);
+            
+                alert("Ocorreu um erro ao editar o paciente. Verifique o console para mais detalhes.");
             }
         });
     })
@@ -808,7 +817,6 @@ function controleValidado() {
 
     $(document).on("change", "select", function () {
         let value = $(this).val();
-        console.log(value)
         if ($(this).val() != "") {
             $(this).removeClass("is-danger ng-untouched ng-pristine ng-invalid");
             $(this).addClass("is-success ng-dirty ng-valid ng-touched");
