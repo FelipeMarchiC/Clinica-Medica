@@ -1,0 +1,19 @@
+# .github/workflows/issue.yml
+name: Criar Issue
+
+on:
+  workflow_dispatch:  
+
+jobs:
+  criar-issue:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Criar nova issue
+        uses: peter-evans/create-issue@v5
+        with:
+          title: "Lembrete para revisar testes"
+          body: |
+            Isso é um lembrete automático para revisar os testes do sistema.
+            - [ ] Rodar testes manuais
+          labels: "automático, teste"
