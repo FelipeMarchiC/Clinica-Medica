@@ -61,13 +61,10 @@ O sistema simula o funcionamento básico de uma clínica médica, permitindo o g
 - SPA sem recarregar a página
 
 ---
-Claro! Aqui está uma seção que você pode adicionar ao final do seu `README.md` com instruções de uso via Docker:
-
----
 
 ## 🐳 Executando com Docker
 
-Se preferir executar o projeto em um contêiner Docker, siga os passos abaixo:
+Você pode rodar este projeto usando Docker! Caso queira siga os passos abaixo:
 
 ### 📁 Pré-requisito
 
@@ -89,8 +86,6 @@ Se preferir executar o projeto em um contêiner Docker, siga os passos abaixo:
    ```
    http://localhost:8080
    ```
-
-> Isso irá rodar a SPA dentro de um servidor Nginx usando Docker, tornando o acesso e deploy local mais prático e padronizado.
 
 ---
 
